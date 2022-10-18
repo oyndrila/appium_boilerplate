@@ -9,9 +9,8 @@ import java.net.URL;
 
 public class AppiumUtils {
 
-    public static AndroidDriver<AndroidElement> createAppiumDriver() throws MalformedURLException {
-        File f = new File("src");
-        File fs = new File(f, "ApiDemos-debug.apk");
+    public static AndroidDriver<AndroidElement> createAppiumDriver(String apkPath) throws MalformedURLException {
+        File fs = new File(apkPath);
 
 
         DesiredCapabilities cap = new DesiredCapabilities();
